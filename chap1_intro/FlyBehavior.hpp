@@ -15,4 +15,8 @@ class FlyNot: public FlyBehavior{
   void fly() const;
 };
 
+class FlyWithRockets: public FlyBehavior{
+  void fly() const;
+};
+
 #endif

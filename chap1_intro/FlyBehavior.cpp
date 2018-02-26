@@ -10,3 +10,8 @@ void FlyWithWings::fly() const{
 void FlyNot::fly() const{
   std::cout << "All I can do is fall" << std::endl;
 }
+
+
+void FlyWithRockets::fly() const{
+  std::cout << "I'm flying faster than sound!" << std::endl;
+}

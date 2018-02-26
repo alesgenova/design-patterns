@@ -8,9 +8,11 @@
 class Duck{
   public:
     Duck();
-    virtual void introduce() const = 0;
+    virtual void display() const = 0;
     void performFly() const;
     void performQuack() const;
+    void setFlyBehavior(std::unique_ptr<FlyBehavior> fb);
+    void setQuackBehavior(std::unique_ptr<QuackBehavior> qb);
 
   protected:
     std::unique_ptr<FlyBehavior> flyBehavior;
@@ -21,7 +23,7 @@ class Duck{
 class MallardDuck: public Duck{
   public:
     MallardDuck();
-    void introduce() const;
+    void display() const;
   private:
 
 };
@@ -30,7 +32,7 @@ class MallardDuck: public Duck{
 class RubberDuck: public Duck{
   public:
     RubberDuck();
-    void introduce() const;
+    void display() const;
   private:
 
 };
@@ -38,7 +40,15 @@ class RubberDuck: public Duck{
 class DecoyDuck: public Duck{
   public:
     DecoyDuck();
-    void introduce() const;
+    void display() const;
+  private:
+
+};
+
+class ModelDuck: public Duck{
+  public:
+    ModelDuck();
+    void display() const;
   private:
 
 };
