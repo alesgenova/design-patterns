@@ -29,5 +29,7 @@ add_executable (
     FlyBehavior.cpp
     QuackBehavior.hpp
     QuackBehavior.cpp
+    DuckCall.hpp
+    DuckCall.cpp
     main.cpp
 )

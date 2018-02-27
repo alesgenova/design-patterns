@@ -4,29 +4,33 @@
 #include "Duck.hpp"
 #include "FlyBehavior.hpp"
 #include "QuackBehavior.hpp"
+#include "DuckCall.hpp"
 
 
 int main(){
 
   MallardDuck mallard;
-  RubberDuck rubber;
-  DecoyDuck decoy;
-  ModelDuck model;
 
   mallard.display();
   mallard.performFly();
   mallard.performQuack();
   std::cout << std::endl;
 
+  RubberDuck rubber;
+  
   rubber.display();
   rubber.performFly();
   rubber.performQuack();
   std::cout << std::endl;
 
+  DecoyDuck decoy;
+
   decoy.display();
   decoy.performFly();
   decoy.performQuack();
   std::cout << std::endl;
+
+  ModelDuck model;
 
   model.display();
   model.performFly();
@@ -39,6 +43,11 @@ int main(){
   model.display();
   model.performFly();
   model.performQuack();
+  std::cout << std::endl;
+
+  DuckCall device;
+  
+  device.performQuack();
 
 
 
