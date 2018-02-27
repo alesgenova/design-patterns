@@ -1,0 +1,6 @@
+
+add_executable (
+    02_main
+    
+    main.cpp
+)
