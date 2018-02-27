@@ -5,4 +5,4 @@ A collections of problems and examples I worked out while following the book [He
 The book uses Java, but I opted to use C++ instead.
 
 1) Strategy pattern
-2) 
+2) Observer pattern
