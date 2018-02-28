@@ -11,7 +11,6 @@ int main(){
   auto screen2 = std::make_shared<StatsScreen>();
 
 
-
   station.registerObserver(screen0);
   station.registerObserver(screen1);
   station.registerObserver(screen2);
@@ -30,7 +29,6 @@ int main(){
 
   //auto payload = std::make_shared<WeatherPayload>(22, 1, 88);
   //screen0.update(payload);
-
 
 
   return 0;

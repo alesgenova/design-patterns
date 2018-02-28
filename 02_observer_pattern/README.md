@@ -5,6 +5,8 @@ dependency between objects so that when one
 object changes state, all of its dependents are
 notified and updated automatically.
 
+![UML](uml.svg)
+
 
 ```plantuml
 @startuml
@@ -39,7 +41,7 @@ class WeatherStation{
 }
 
 
-interface WeatherScreen{
+Abstract WeatherScreen{
   update(WeatherPayload)
 }
 
@@ -68,6 +70,9 @@ class WeatherPayload{
   getHumidity()
 }
 
+Subject -- Observer
+
+Payload -- Observer
 
 Subject <|.. WeatherStation
 
