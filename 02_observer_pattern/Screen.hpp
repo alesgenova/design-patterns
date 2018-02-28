@@ -8,7 +8,7 @@
 
 class WeatherScreen : public Observer{
   public:
-    //virtual ~WeatherScreen() = 0;
+    virtual ~WeatherScreen() = 0;
     virtual void update(std::shared_ptr<WeatherPayload> p) override;
   protected:
     float temperature;
@@ -22,6 +22,21 @@ class CurrentScreen : public WeatherScreen{
 
   private:
 
+};
+
+class ForecastScreen : public WeatherScreen{
+  public:
+    void update(std::shared_ptr<WeatherPayload> p);
+
+  private:
+
+};
+
+class StatsScreen : public WeatherScreen{
+  public:
+    void update(std::shared_ptr<WeatherPayload> p);
+
+  private:
 
 };
 

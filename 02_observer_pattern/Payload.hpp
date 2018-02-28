@@ -6,7 +6,7 @@
 class Payload{
   public:
     //Payload();
-    //~Payload() = 0;
+    virtual ~Payload() = 0;
   private:
 
 };

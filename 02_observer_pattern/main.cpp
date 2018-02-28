@@ -6,9 +6,9 @@
 
 int main(){
   WeatherStation station;
-  std::shared_ptr<CurrentScreen> screen0 = std::make_shared<CurrentScreen>();
-  std::shared_ptr<CurrentScreen> screen1 = std::make_shared<CurrentScreen>();
-  std::shared_ptr<CurrentScreen> screen2 = std::make_shared<CurrentScreen>();
+  auto screen0 = std::make_shared<CurrentScreen>();
+  auto screen1 = std::make_shared<ForecastScreen>();
+  auto screen2 = std::make_shared<StatsScreen>();
 
 
 
