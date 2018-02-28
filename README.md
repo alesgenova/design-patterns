@@ -6,3 +6,11 @@ The book uses Java, but I opted to use C++ instead.
 
 1) Strategy pattern
 2) Observer pattern
+
+
+## Strategy Pattern
+![Strategy UML](01_strategy_pattern/uml.svg)
+
+
+## Observer Pattern
+![Strategy UML](02_observer_pattern/uml.svg)

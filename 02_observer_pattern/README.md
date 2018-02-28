@@ -11,9 +11,6 @@ notified and updated automatically.
 ```plantuml
 @startuml
 
-title Observer Pattern
-
-
 interface Subject{
   observers : Observer[]
   registerObserver(Observer)
