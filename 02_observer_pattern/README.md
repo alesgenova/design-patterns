@@ -11,6 +11,7 @@ notified and updated automatically.
 
 title Observer Pattern
 
+
 interface Subject{
   observers : Observer[]
   registerObserver(Observer)
@@ -23,46 +24,58 @@ interface Observer{
   update(Payload)
 }
 
+
 interface Payload{
 
 }
 
 
-class WeatherData{
-  registerObserver(Observer){}
-  removeObserver(Observer){}
+class WeatherStation{
+  registerObserver(WeatherScreen){}
+  removeObserver(WeatherScreen){}
   notifyObservers(){}
   getData(){}
   setData(WeatherPayload){}
 }
 
 
+interface WeatherScreen{
+  update(WeatherPayload)
+}
+
+
 class CurrentScreen{
-  update(WeatherPayload){}
+  update(WeatherPayload)
 }
 
 
 class StatsScreen{
-  update(WeatherPayload){}
+  update(WeatherPayload)
 }
 
 
 class ForecastScreen{
-  update(data){}
+  update(WeatherPayload)
 }
+
 
 class WeatherPayload{
   temperature : float
   pressure : float
   humidity : float
+  getTemperature()
+  getPressure()
+  getHumidity()
 }
 
 
-Subject <|.. WeatherData
+Subject <|.. WeatherStation
 
-Observer <|.. CurrentScreen
-Observer <|.. StatsScreen
-Observer <|.. ForecastScreen
+Observer <|.. WeatherScreen
+
+WeatherScreen <|.. CurrentScreen
+WeatherScreen <|.. StatsScreen
+WeatherScreen <|.. ForecastScreen
 
 Payload <|.. WeatherPayload
 

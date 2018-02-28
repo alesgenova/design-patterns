@@ -9,7 +9,10 @@ add_executable (
     Screen.cpp
     Subject.hpp
     Subject.cpp
-    WeatherData.hpp
-    WeatherData.cpp
+    WeatherStation.hpp
+    WeatherStation.cpp
+    WeatherPayload.hpp
+    WeatherPayload.cpp
     main.cpp
 )
+

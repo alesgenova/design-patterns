@@ -10,12 +10,20 @@ void Subject::registerObserver(std::shared_ptr<Observer> o){
 }
 
 
-
 void Subject::removeObserver(std::shared_ptr<Observer> o){
   for (auto it = observers.begin(); it != observers.end(); it++){
     if (*it==o){
       observers.erase(it);
+      return;
     }
+  }
+  return;
+}
+
+
+void Subject::notifyObservers(std::shared_ptr<Payload> p) const{
+  for (auto it = observers.begin(); it != observers.end(); it++){
+    (*it)->update(p);
   }
   return;
 }

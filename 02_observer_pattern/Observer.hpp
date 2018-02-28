@@ -2,7 +2,6 @@
 #define OBSERVER_HPP
 
 #include <memory>
-#include "Subject.hpp"
 #include "Payload.hpp"
 
 class Observer{
