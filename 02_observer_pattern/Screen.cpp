@@ -3,7 +3,12 @@
 #include "Screen.hpp"
 #include "WeatherPayload.hpp"
 
+
+//WeatherScreen::~WeatherScreen(){}
+
+
 void WeatherScreen::update(std::shared_ptr<WeatherPayload> p){
+  std::cout << "WeatherScreen::update" << std::endl;
   temperature = p->getTemperature();
   pressure = p->getPressure();
   humidity = p->getHumidity();
@@ -13,7 +18,8 @@ void WeatherScreen::update(std::shared_ptr<WeatherPayload> p){
 }
 
 void CurrentScreen::update(std::shared_ptr<WeatherPayload> p){
-  std::cout << "CurrentScreen just received an update!" << std::endl;
+  std::cout << "CurrentScreen::update" << std::endl;
+  std::cout << "CurrentScreen just received an update! " << getId() << std::endl;
   WeatherScreen::update(p);
   return;
 }

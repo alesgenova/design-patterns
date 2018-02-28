@@ -2,18 +2,21 @@
 #define SUBJECT_HPP
 
 #include <vector>
+#include <memory>
 #include "Observer.hpp"
 #include "Payload.hpp"
 
 class Subject{
   public:
     virtual ~Subject() = 0;
-    void registerObserver(std::shared_ptr<Observer> o);
-    void removeObserver(std::shared_ptr<Observer> o);
+    void registerObserver(Observer* o);
+    void removeObserver(Observer* o);
     void notifyObservers(std::shared_ptr<Payload> p) const;
+    void announceObservers() const;
+    std::vector<Observer*> getObservers() const;
 
   private:
-    std::vector<std::shared_ptr<Observer>> observers;
+    std::vector<Observer*> observers;
 };
 
 #endif
