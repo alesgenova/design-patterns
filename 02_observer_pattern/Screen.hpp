@@ -3,12 +3,13 @@
 
 #include <memory>
 #include "Observer.hpp"
+#include "Payload.hpp"
 #include "WeatherPayload.hpp"
 
 class WeatherScreen : public Observer{
   public:
     //virtual ~WeatherScreen() = 0;
-    void update(std::shared_ptr<WeatherPayload> p);
+    virtual void update(std::shared_ptr<WeatherPayload> p) override;
   protected:
     float temperature;
     float pressure;

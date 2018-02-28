@@ -1,9 +1,9 @@
 #ifndef WPAYLOAD_HPP
 #define WPAYLOAD_HPP
 
-#include "Payload.hpp"
+//#include "Payload.hpp"
 
-class WeatherPayload : public Payload{
+class WeatherPayload{
   public:
     WeatherPayload(float, float, float);
     ~WeatherPayload();

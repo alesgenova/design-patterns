@@ -7,14 +7,14 @@
 
 Subject::~Subject(){}
 
-void Subject::registerObserver(Observer* o){
+void Subject::registerObserver(std::shared_ptr<Observer> o){
   observers.push_back(o);
   return;
 }
 
 
 //void Subject::removeObserver(std::shared_ptr<Observer> o){
-void Subject::removeObserver(Observer* o){
+void Subject::removeObserver(std::shared_ptr<Observer> o){
 
   for (auto it = observers.begin(); it != observers.end(); it++){
     if ((*it)->getId()==o->getId()){
@@ -26,7 +26,7 @@ void Subject::removeObserver(Observer* o){
 }
 
 
-void Subject::notifyObservers(std::shared_ptr<Payload> p) const{
+void Subject::notifyObservers(std::shared_ptr<WeatherPayload> p) const{
   for (auto it = observers.begin(); it != observers.end(); it++){
     (*it)->update(p);
   }
@@ -34,7 +34,7 @@ void Subject::notifyObservers(std::shared_ptr<Payload> p) const{
 }
 
 
-std::vector<Observer*> Subject::getObservers() const{
+std::vector<std::shared_ptr<Observer>> Subject::getObservers() const{
   return observers;
 }
 

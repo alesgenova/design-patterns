@@ -3,14 +3,14 @@
 
 #include <memory>
 #include <string>
-#include "Payload.hpp"
+#include "WeatherPayload.hpp"
 
 class Observer{
   public:
     Observer();
     virtual ~Observer() = 0;
+    virtual void update(std::shared_ptr<WeatherPayload> payload);
     long int getId() const;
-    virtual void update(std::shared_ptr<Payload> payload);
     void display() const;
 
   private:

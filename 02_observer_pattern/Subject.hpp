@@ -4,19 +4,19 @@
 #include <vector>
 #include <memory>
 #include "Observer.hpp"
-#include "Payload.hpp"
+#include "WeatherPayload.hpp"
 
 class Subject{
   public:
     virtual ~Subject() = 0;
-    void registerObserver(Observer* o);
-    void removeObserver(Observer* o);
-    void notifyObservers(std::shared_ptr<Payload> p) const;
+    void registerObserver(std::shared_ptr<Observer> o);
+    void removeObserver(std::shared_ptr<Observer> o);
+    void notifyObservers(std::shared_ptr<WeatherPayload> p) const;
     void announceObservers() const;
-    std::vector<Observer*> getObservers() const;
+    std::vector<std::shared_ptr<Observer>> getObservers() const;
 
   private:
-    std::vector<Observer*> observers;
+    std::vector<std::shared_ptr<Observer>> observers;
 };
 
 #endif

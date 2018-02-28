@@ -1,7 +1,7 @@
 #include <iostream>
 #include <random>
 #include "Observer.hpp"
-#include "Payload.hpp"
+#include "WeatherPayload.hpp"
 
 
 Observer::Observer()
@@ -10,7 +10,7 @@ Observer::Observer()
 
 Observer::~Observer(){}
 
-void Observer::update(std::shared_ptr<Payload> payload){
+void Observer::update(std::shared_ptr<WeatherPayload> payload){
   std::cout << "Observer::update" << std::endl;
 }
 
