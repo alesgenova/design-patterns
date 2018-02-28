@@ -5,7 +5,6 @@ dependency between objects so that when one
 object changes state, all of its dependents are
 notified and updated automatically.
 
-![UML](http://www.plantuml.com/plantuml/svg/ZPA_Ri8m4CRtUmgFOU41gWv8HLrRAKC7n72O3vegEEZkWbG5tXrZ4fgaLTJ5zdtV_Vd9zaADnUf3IMI5bN1l6uMS8EwTpI21g0Xntx67o-lD5xmrv5pLfgbxUfIirj4Gx0kD1PsOTOTPCW_L2NzQeR9YzzqfciteGltPdNCRNX-tRCZYmlSqNxAg-m3R9sGPvMQIfBbCi2Jp5qrIzx1RypRIDaeOKVa1UQb542pt0eGny20pDpRzHzvh9V2iqotRvt7Fv_cyVnb4ZqTDrW1lvFM0HiuGWMY1i8t_vWe0.svg)
 
 ```plantuml
 @startuml
@@ -21,7 +20,11 @@ interface Subject{
 
 
 interface Observer{
-  update(data)
+  update(Payload)
+}
+
+interface Payload{
+
 }
 
 
@@ -30,22 +33,28 @@ class WeatherData{
   removeObserver(Observer){}
   notifyObservers(){}
   getData(){}
-  setData(data){}
+  setData(WeatherPayload){}
 }
 
 
 class CurrentScreen{
-  update(data){}
+  update(WeatherPayload){}
 }
 
 
 class StatsScreen{
-  update(data){}
+  update(WeatherPayload){}
 }
 
 
 class ForecastScreen{
   update(data){}
+}
+
+class WeatherPayload{
+  temperature : float
+  pressure : float
+  humidity : float
 }
 
 
@@ -54,6 +63,9 @@ Subject <|.. WeatherData
 Observer <|.. CurrentScreen
 Observer <|.. StatsScreen
 Observer <|.. ForecastScreen
+
+Payload <|.. WeatherPayload
+
 
 @enduml
 ```
