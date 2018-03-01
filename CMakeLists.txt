@@ -23,3 +23,4 @@ endif()
 
 add_subdirectory(01_strategy_pattern)
 add_subdirectory(02_observer_pattern)
+add_subdirectory(03_decorator_pattern)
