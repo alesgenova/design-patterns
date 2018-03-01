@@ -1,6 +1,6 @@
 # Strategy pattern
 
-The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from  clients that use it.
+> The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from  clients that use it.
 
 ![UML](uml.svg)
 
@@ -15,7 +15,6 @@ Abstract Duck{
   performQuack()
   setFlyBehavior()
   setQuackBehavior()
-  
 }
 
 Class MallardDuck{
@@ -73,10 +72,10 @@ Class DuckCall{
 }
 
 
-Duck <|.. MallardDuck
-Duck <|.. RubberDuck
-Duck <|.. DecoyDuck
-Duck <|.. ModelDuck
+Duck <|-- MallardDuck
+Duck <|-- RubberDuck
+Duck <|-- DecoyDuck
+Duck <|-- ModelDuck
 
 FlyBehavior <|.. WingsFly
 FlyBehavior <|.. RocketFly
