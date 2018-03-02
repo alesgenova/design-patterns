@@ -11,8 +11,8 @@ add_executable (
     ../03_decorator_pattern/Toppings.cpp
     PizzaFactory.hpp
     PizzaFactory.cpp
-    #PizzaStore.hpp
-    #PizzaStore.cpp
+    PizzaStore.hpp
+    PizzaStore.cpp
     main.cpp
 )
 

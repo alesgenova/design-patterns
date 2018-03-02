@@ -4,6 +4,8 @@
 
 I didn't like the Factory pattern example from the book, so I made up my own, where the factory produces the selected pizza reusing the base pizza and decorators that I created in the decorator pattern example.
 
+Combining `Decorator Pattern` and `Factory Pattern` form maximum code reusability and flexibility!
+
 ![UML](uml.svg)
 
 ```plantuml

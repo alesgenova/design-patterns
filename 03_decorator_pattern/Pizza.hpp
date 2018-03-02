@@ -19,24 +19,27 @@ class Pizza{
 class Margherita : public Pizza{
   public:
     Margherita(): Pizza(7.99, "Margherita"){};
-  private:
-    double cost;
 };
 
 class Calzone : public Pizza{
   public:
     Calzone(): Pizza(8.99, "Calzone"){};
-  private:
-    double cost;
 };
 
 class FlatBread : public Pizza{
   public:
     FlatBread(): Pizza(4.99, "FlatBread"){};
-  private:
-    double cost;
 };
 
+class Veggie : public Pizza{
+  public:
+    Veggie(): Pizza(8.99, "Veggie"){};
+};
+
+class Basic : public Pizza{
+  public:
+    Basic(): Pizza(4.99, "Basic"){};
+};
 
 
 #endif
