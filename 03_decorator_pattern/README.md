@@ -12,10 +12,15 @@ Abstract Pizza{
   getDescription() : string
 }
 
-Abstract ToppingDecorator{
+Abstract PizzaDecorator{
   getCost()
   getDescription()
   wrappedPizza : Pizza
+}
+
+Abstract ToppingDecorator{
+  getCost()
+  getDescription()
 }
 
 Class Margherita{
@@ -53,12 +58,34 @@ Class Arugula{
   getDescription()
 }
 
+Abstract StyleDecorator{
+  getCost()
+  getDescription()
+}
+
+Class NewYorkStyle{
+  getCost()
+  getDescription()
+}
+
+Class ChicagoStyle{
+  getCost()
+  getDescription()
+}
+
 Pizza <|-- Margherita
 Pizza <|-- Calzone
 Pizza <|-- FlatBread
 Pizza <|-- BasicPizza
 
-Pizza <|--- ToppingDecorator
+Pizza <|--- PizzaDecorator
+
+PizzaDecorator <|-- ToppingDecorator
+
+PizzaDecorator <|-- StyleDecorator
+
+StyleDecorator <|-- NewYorkStyle
+StyleDecorator <|-- ChicagoStyle
 
 ToppingDecorator <|-- Mozzarella
 ToppingDecorator <|-- Pepperoni

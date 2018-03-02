@@ -4,16 +4,12 @@
 #include <string>
 #include <memory>
 #include "Pizza.hpp"
+#include "PizzaDecorator.hpp"
 
-class ToppingDecorator : public Pizza{
+class ToppingDecorator : public PizzaDecorator{
   public:
     ToppingDecorator(double cost, std::string description, std::shared_ptr<Pizza> pizza);
     virtual ~ToppingDecorator() = 0;
-    virtual std::string getDescription() const override;
-    virtual double getCost() const override;
-
-  protected:
-    std::shared_ptr<Pizza> wrappedPizza;
 
 };
 
