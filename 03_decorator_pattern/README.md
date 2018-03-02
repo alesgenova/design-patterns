@@ -92,7 +92,5 @@ ToppingDecorator <|-- Pepperoni
 ToppingDecorator <|-- Arugula
 
 
-
-
 @enduml
 ```
