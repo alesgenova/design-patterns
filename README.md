@@ -8,6 +8,9 @@ The book uses Java, but I opted to use C++ instead.
 2. Observer pattern
 3. Decorator pattern
 4. Factory pattern
+5. Singleton pattern
+
+... More coming soon
 
 
 ## Strategy Pattern
@@ -20,4 +23,4 @@ The book uses Java, but I opted to use C++ instead.
 ![Decorator UML](03_decorator_pattern/uml.svg)
 
 ## Factory Pattern
-![Factory UML](03_decorator_pattern/uml.svg)
+![Factory UML](04_factory_pattern/uml.svg)
