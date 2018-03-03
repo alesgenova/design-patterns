@@ -113,3 +113,11 @@ void DoorCloseCmd::execute(){
   prevStatus = receiver->getStatus();
   receiver->close();
 }
+
+
+// Dummy NullCmd class does nothing, but still implements the Command interface
+NullCmd::NullCmd(){}
+
+void NullCmd::execute(){}
+
+void NullCmd::undo(){}

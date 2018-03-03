@@ -4,7 +4,8 @@ add_library (
 #    Client.hpp
     Command.hpp
     Command.cpp
-#    Invoker.hpp
+    Invoker.hpp
+    Invoker.cpp
     Receiver.hpp
     Receiver.cpp
 )

@@ -29,26 +29,28 @@ Interface Client{
 Class RemoteControl{
   - onSlots : Command[]
   - offSlots : Command[]
+  - lastCommand : Command
   + pressOnBtn(int i)
   + pressOffBtn(int i)
   + setSlot(int, Command, Command)
+  + clearSlot(int i)
   + undoLast()
 }
 
 Class Light{
-  - on()
-  - off()
+  + on()
+  + off()
 }
 
 Class GarageDoor{
-  - open()
-  - close()
+  + open()
+  + close()
 }
 
 Class CeilingFan{
-  - high()
-  - low()
-  - off()
+  + high()
+  + low()
+  + off()
 }
 
 Class NullCommand{

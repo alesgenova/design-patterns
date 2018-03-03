@@ -86,4 +86,11 @@ class DoorCloseCmd : public DoorCmd{
 };
 
 
+class NullCmd : public Command{
+  public:
+    NullCmd();
+    virtual void execute() override;
+    virtual void undo() override;
+};
+
 #endif
