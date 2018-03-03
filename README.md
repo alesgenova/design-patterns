@@ -1,5 +1,7 @@
 # Design Patterns
 
+[![pipeline status](https://gitlab.com/ales.genova/design-patterns/badges/master/pipeline.svg)](https://gitlab.com/ales.genova/design-patterns/commits/master)
+
 A collections of problems and examples I worked out while studying the book [Head First Design Patterns](http://shop.oreilly.com/product/9780596007126) by Eric Freeman and Elizabeth Freeman.
 
 The book uses Java, but I opted to use C++ instead.
