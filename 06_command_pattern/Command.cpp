@@ -82,3 +82,34 @@ void FanOffCmd::execute(){
 
 
 // Door Commands
+
+DoorCmd::DoorCmd(std::shared_ptr<Door> t_receiver)
+  : receiver(t_receiver)
+  , prevStatus(receiver->getStatus())
+{}
+
+void DoorCmd::undo(){
+  if (prevStatus == Door::CLOSED){
+    receiver->close();
+  }else if (prevStatus == Door::OPEN){
+    receiver->open();
+  }
+}
+
+DoorOpenCmd::DoorOpenCmd(std::shared_ptr<Door> t_receiver)
+  : DoorCmd::DoorCmd(t_receiver)
+{}
+
+void DoorOpenCmd::execute(){
+  prevStatus = receiver->getStatus();
+  receiver->open();
+}
+
+DoorCloseCmd::DoorCloseCmd(std::shared_ptr<Door> t_receiver)
+  : DoorCmd::DoorCmd(t_receiver)
+{}
+
+void DoorCloseCmd::execute(){
+  prevStatus = receiver->getStatus();
+  receiver->close();
+}

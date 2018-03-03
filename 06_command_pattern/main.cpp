@@ -27,6 +27,15 @@ int main(){
   fanOff->undo();
 
 
+  auto door = std::make_shared<Door>("Garage");
+  auto doorOpen = std::make_shared<DoorOpenCmd>(door);
+  auto doorClose = std::make_shared<DoorCloseCmd>(door);
+
+  doorOpen->execute();
+  doorClose->execute();
+  doorClose->undo();
+
+
   // auto door = std::make_shared<Door>("Garage");
 
   // std::cout << light->getStatus() << std::endl;

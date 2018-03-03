@@ -5,6 +5,7 @@
 
 ![UML](uml.svg)
 
+
 ```plantuml
 @startuml
 
@@ -28,17 +29,13 @@ Interface Client{
 Class RemoteControl{
   - onSlots : Command[]
   - offSlots : Command[]
-  + onBtnPressed(int i)
-  + offBtnPressed(int i)
+  + pressOnBtn(int i)
+  + pressOffBtn(int i)
   + setSlot(int, Command, Command)
+  + undoLast()
 }
 
 Class Light{
-  - on()
-  - off()
-}
-
-Class Stereo{
   - on()
   - off()
 }
@@ -56,6 +53,7 @@ Class CeilingFan{
 
 Class NullCommand{
   +execute()
+  +undo()
 }
 
 Abstract LightCmd{
@@ -120,7 +118,6 @@ Command -> Receiver : receiver.action()
 Invoker <|.. RemoteControl
 
 Receiver <|.. Light
-Receiver <|.. Stereo
 Receiver <|.. GarageDoor
 Receiver <|.. CeilingFan
 

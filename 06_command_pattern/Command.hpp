@@ -63,4 +63,27 @@ class FanOffCmd : public FanCmd{
 };
 
 
+class DoorCmd : public Command{
+  public:
+    DoorCmd(std::shared_ptr<Door> t_receiver);
+    virtual void execute() = 0;
+    virtual void undo() override;
+  protected:
+    std::shared_ptr<Door> receiver;
+    int prevStatus;
+};
+
+class DoorOpenCmd : public DoorCmd{
+  public:
+    DoorOpenCmd(std::shared_ptr<Door> t_receiver);
+    virtual void execute() override;
+};
+
+class DoorCloseCmd : public DoorCmd{
+  public:
+    DoorCloseCmd(std::shared_ptr<Door> t_receiver);
+    virtual void execute() override;
+};
+
+
 #endif

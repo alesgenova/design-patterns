@@ -32,3 +32,4 @@ The book uses Java, but I opted to use C++ instead.
 ![Singleton UML](05_singleton_pattern/uml.svg)
 
 ## Command Pattern
+![Command UML](06_command_pattern/uml.svg)
