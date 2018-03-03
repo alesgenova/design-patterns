@@ -8,8 +8,6 @@
 ```plantuml
 @startuml
 
-
-
 Interface Command{
   + execute()
   - receiver : Receiver
@@ -53,6 +51,10 @@ Class CeilingFan{
   - high()
   - low()
   - off()
+}
+
+Class NullCommand{
+  +execute()
 }
 
 Class LightOnCmd{
@@ -115,7 +117,7 @@ Receiver <|.. Stereo
 Receiver <|.. GarageDoor
 Receiver <|.. CeilingFan
 
-<color:#FFFFFFF> PLACEHOLDER1
+<> PLACEHOLDER1
 
 Command <|.. PLACEHOLDER1
 
@@ -128,6 +130,8 @@ PLACEHOLDER1 .. FanOffCmd
 
 PLACEHOLDER1 ... DoorOpenCmd
 PLACEHOLDER1 ... DoorCloseCmd
+
+PLACEHOLDER1 ... NullCommand
 
 
 
