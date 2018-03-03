@@ -13,11 +13,10 @@ void makeSingleton(std::shared_ptr< Singleton > s[], int i){
 
 int main(){
   const int n = 20;
-  const bool threaded = false;
+  const bool threaded = true;
   std::shared_ptr< Singleton > s_vec[n];
   std::thread t_vec[n];
 
-  // spawn n threads:
   for (int i = 0; i < n; ++i) {
     if (threaded){
       // multithreaded version to check if the Singleton is threadsafe

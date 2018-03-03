@@ -24,3 +24,6 @@ The book uses Java, but I opted to use C++ instead.
 
 ## Factory Pattern
 ![Factory UML](04_factory_pattern/uml.svg)
+
+## Singleton Pattern
+![Singleton UML](05_singleton_pattern/uml.svg)

@@ -15,7 +15,6 @@ class Singleton{
     // private constructor is central to the singleton pattern
     Singleton();
     static std::shared_ptr<Singleton> uniqueInstance;
-    static std::shared_ptr<Singleton> getInstanceHelper();
     static std::mutex m;
 };
 
