@@ -9,8 +9,9 @@ The book uses Java, but I opted to use C++ instead.
 3. Decorator pattern
 4. Factory pattern
 5. Singleton pattern
+6. Command pattern
 
-... More coming soon
+... More coming as I go
 
 
 ## Strategy Pattern
@@ -27,3 +28,5 @@ The book uses Java, but I opted to use C++ instead.
 
 ## Singleton Pattern
 ![Singleton UML](05_singleton_pattern/uml.svg)
+
+## Command Pattern
