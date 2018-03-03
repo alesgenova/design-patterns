@@ -17,10 +17,10 @@ class Light : public Receiver{
     void on();
     void off();
     int getStatus() const;
-
-  private:
     static const int OFF = 0;
     static const int ON = 1;
+
+  private:
     int status;
 };
 
@@ -31,11 +31,11 @@ class CeilingFan : public Receiver{
     void low();
     void off();
     int getStatus() const;
-
-  private:
     static const int HIGH = 2;
     static const int LOW = 1;
     static const int OFF = 0;
+
+  private:
     int status;
 };
 
@@ -45,10 +45,10 @@ class Door : public Receiver{
     void open();
     void close();
     int getStatus() const;
-
-  private:
     static const int CLOSED = 0;
     static const int OPEN = 1;
+
+  private:
     int status;
 };
 

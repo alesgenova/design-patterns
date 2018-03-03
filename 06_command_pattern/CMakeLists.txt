@@ -2,7 +2,8 @@ add_library (
     06_lib
     SHARED
 #    Client.hpp
-#    Command.hpp
+    Command.hpp
+    Command.cpp
 #    Invoker.hpp
     Receiver.hpp
     Receiver.cpp
