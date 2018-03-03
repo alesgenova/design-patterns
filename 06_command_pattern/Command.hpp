@@ -34,4 +34,33 @@ class LightOffCmd : public LightCmd{
 };
 
 
+class FanCmd : public Command{
+  public:
+    FanCmd(std::shared_ptr<CeilingFan> t_receiver);
+    virtual void execute() = 0;
+    virtual void undo() override;
+  protected:
+    std::shared_ptr<CeilingFan> receiver;
+    int prevStatus;
+};
+
+class FanHighCmd : public FanCmd{
+  public:
+    FanHighCmd(std::shared_ptr<CeilingFan> t_receiver);
+    virtual void execute() override;
+};
+
+class FanLowCmd : public FanCmd{
+  public:
+    FanLowCmd(std::shared_ptr<CeilingFan> t_receiver);
+    virtual void execute() override;
+};
+
+class FanOffCmd : public FanCmd{
+  public:
+    FanOffCmd(std::shared_ptr<CeilingFan> t_receiver);
+    virtual void execute() override;
+};
+
+
 #endif

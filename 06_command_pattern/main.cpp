@@ -15,7 +15,18 @@ int main(){
   lightOff->execute();
   lightOff->undo();
 
-  // auto fan = std::make_shared<CeilingFan>("Living Room");
+
+  auto fan = std::make_shared<CeilingFan>("Living Room");
+  auto fanHigh = std::make_shared<FanHighCmd>(fan);
+  auto fanLow = std::make_shared<FanLowCmd>(fan);
+  auto fanOff = std::make_shared<FanOffCmd>(fan);
+
+  fanHigh->execute();
+  fanLow->execute();
+  fanOff->execute();
+  fanOff->undo();
+
+
   // auto door = std::make_shared<Door>("Garage");
 
   // std::cout << light->getStatus() << std::endl;
