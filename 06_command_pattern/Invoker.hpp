@@ -23,7 +23,7 @@ class RemoteControl : public Invoker{
     static std::shared_ptr<Command> emptyCmd;
     std::vector< std::shared_ptr< Command > > onSlots;
     std::vector< std::shared_ptr< Command > > offSlots;
-    std::shared_ptr<Command> lastCommand;
+    std::vector< std::shared_ptr<Command> > lastCommands;
 };
 
 #endif

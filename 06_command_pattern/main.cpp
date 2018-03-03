@@ -36,6 +36,7 @@ int main(){
   remote.pressOnBtn(2);
   remote.pressOnBtn(3);
   remote.undoLast();
+  remote.undoLast();
 
   remote.pressOffBtn(2);
   remote.pressOffBtn(1);

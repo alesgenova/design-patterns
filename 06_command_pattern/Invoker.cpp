@@ -1,3 +1,4 @@
+#include <iostream>
 #include <memory>
 
 #include "Command.hpp"
@@ -11,7 +12,6 @@ RemoteControl::RemoteControl(){
     onSlots.push_back(emptyCmd);
     offSlots.push_back(emptyCmd);
   }
-  lastCommand = emptyCmd;
 }
 
 void RemoteControl::setSlot(int i, std::shared_ptr<Command> onCmd,std::shared_ptr<Command> offCmd){
@@ -26,17 +26,20 @@ void RemoteControl::clearSlot(int i){
 
 void RemoteControl::pressOnBtn(int i){
   onSlots[i]->execute();
-  lastCommand = onSlots[i];
+  lastCommands.push_back(onSlots[i]);
 }
 
 void RemoteControl::pressOffBtn(int i){
   offSlots[i]->execute();
-  lastCommand = offSlots[i];
+  lastCommands.push_back(offSlots[i]);
 }
 
 void RemoteControl::undoLast(){
-  lastCommand->undo();
-  lastCommand = emptyCmd;
+  if (lastCommands.size() > 0){
+    std::cout << "UNDOING" << std::endl;
+    lastCommands[lastCommands.size()-1]->undo();
+    lastCommands.erase(lastCommands.end());
+  }
 }
 
 
