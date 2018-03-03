@@ -10,6 +10,7 @@
 
 Interface Command{
   + execute()
+  + undo()
   - receiver : Receiver
 }
 
@@ -57,47 +58,53 @@ Class NullCommand{
   +execute()
 }
 
-Class LightOnCmd{
-  + LightOnCmd(Light)
+Abstract LightCmd{
+  + LightCmd(Light)
   + execute()
+  + undo()
   - receiver : Light
+}
+
+Class LightOnCmd{
+  + execute()
 }
 
 Class LightOffCmd{
-  + LightOffCmd(Light)
   + execute()
-  - receiver : Light
 }
 
+Abstract DoorCmd{
+  + DoorCmd(GarageDoor)
+  + execute()
+  + undo()
+  - receiver : GarageDoor
+}
 
 Class DoorOpenCmd{
-  + DoorOpenCmd(GarageDoor)
   + execute()
-  - receiver : GarageDoor
 }
 
 Class DoorCloseCmd{
-  + DoorCloseCmd(GarageDoor)
   + execute()
-  - receiver : GarageDoor
+}
+
+Abstract FanCmd{
+  + FanCmd(CeilingFan)
+  + execute()
+  + undo()
+  - receiver : CeilingFan
 }
 
 Class FanHighCmd{
-  + FanHighCmd(CeilingFan)
   + execute()
-  - receiver : CeilingFan
 }
 
 Class FanLowCmd{
-  + FanLowCmd(CeilingFan)
   + execute()
-  - receiver : CeilingFan
 }
 
 Class FanOffCmd{
-  + FanOffCmd(CeilingFan)
   + execute()
-  - receiver : CeilingFan
 }
 
 
@@ -121,17 +128,20 @@ Receiver <|.. CeilingFan
 
 Command <|.. PLACEHOLDER1
 
-PLACEHOLDER1 .. LightOnCmd
-PLACEHOLDER1 .. LightOffCmd
+PLACEHOLDER1 .. LightCmd
+LightCmd <|-- LightOnCmd
+LightCmd <|-- LightOffCmd
 
-PLACEHOLDER1 .. FanHighCmd
-PLACEHOLDER1 .. FanLowCmd
-PLACEHOLDER1 .. FanOffCmd
+PLACEHOLDER1 .. FanCmd
+FanCmd <|-- FanHighCmd
+FanCmd <|-- FanLowCmd
+FanCmd <|-- FanOffCmd
 
-PLACEHOLDER1 ... DoorOpenCmd
-PLACEHOLDER1 ... DoorCloseCmd
+PLACEHOLDER1 .. DoorCmd
+DoorCmd <|--- DoorOpenCmd
+DoorCmd <|--- DoorCloseCmd
 
-PLACEHOLDER1 ... NullCommand
+PLACEHOLDER1 .. NullCommand
 
 
 
