@@ -9,7 +9,7 @@ ENDIF(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
 
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-    SET(CMAKE_CXX_FLAGS "-std=c++14 -Wall -Wextra -Wpedantic")
+    SET(CMAKE_CXX_FLAGS "-std=c++14 -pthread -Wall -Wextra -Wpedantic")
     SET(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g")
     SET(CMAKE_CXX_FLAGS_RELEASE "-O2")
     SET(CMAKE_CXX_FLAGS_DEBUG  "-O0 -g --coverage")
@@ -25,3 +25,4 @@ add_subdirectory(01_strategy_pattern)
 add_subdirectory(02_observer_pattern)
 add_subdirectory(03_decorator_pattern)
 add_subdirectory(04_factory_pattern)
+add_subdirectory(05_singleton_pattern)
