@@ -12,6 +12,7 @@ The book uses Java, but I opted to use C++ instead.
 4. Factory pattern
 5. Singleton pattern
 6. Command pattern
+7. Adapter pattern and Facade pattern
 
 ... More coming as I go
 
@@ -33,3 +34,6 @@ The book uses Java, but I opted to use C++ instead.
 
 ## Command Pattern
 ![Command UML](06_command_pattern/uml.svg)
+
+## Adapter Pattern
+![Adapter UML](07_adapter_pattern/uml.svg)
