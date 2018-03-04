@@ -17,4 +17,36 @@ class IceWater : public WaterBehavior{
     virtual void addWater();
 };
 
+
+class BrewBehavior{
+  public:
+    virtual void brew() = 0;
+};
+
+class CoffeeBrew : public BrewBehavior{
+  public:
+    virtual void brew();
+};
+
+class TeaBrew : public BrewBehavior{
+  public:
+    virtual void brew();
+};
+
+
+class CondimentBehavior{
+  public:
+    virtual void addCondiments() = 0;
+};
+
+class MilkSugar : public CondimentBehavior{
+  public:
+    virtual void addCondiments();
+};
+
+class Lemon : public CondimentBehavior{
+  public:
+    virtual void addCondiments();
+};
+
 #endif

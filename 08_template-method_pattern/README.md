@@ -25,6 +25,10 @@ Abstract Beverage{
   # addCondiments()
 }
 
+note right of Beverage::prepareRecipe
+  This is the Template Method
+end note
+
 
 package "Use Composition / Strategy Pattern" {
 
@@ -50,9 +54,15 @@ package "Use Inheritance and Overriding" {
   Class TemplateHotCoffee{
     # addWater()
     # brew()
-    # pour()
     # addCondiments()
   }
+
+  Class TemplateHotTea{
+    # addWater()
+    # brew()
+    # addCondiments()
+  }
+
 }
 
 
@@ -135,6 +145,7 @@ IcedCoffee *--- CoffeeBrew
 IcedCoffee *--- MilkSugar
 
 TemplateHotCoffee --|> Beverage
+TemplateHotTea --|> Beverage
 
 @enduml
 ```
