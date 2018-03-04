@@ -13,6 +13,7 @@ The book uses Java, but I opted to use C++ instead.
 5. Singleton pattern
 6. Command pattern
 7. Adapter pattern and Facade pattern
+8. Template Method Pattern
 
 ... More coming as I go
 
@@ -37,3 +38,6 @@ The book uses Java, but I opted to use C++ instead.
 
 ## Adapter Pattern
 ![Adapter UML](07_adapter_pattern/uml.svg)
+
+## Template Method Pattern
+![Template UML](08_template-method_pattern/uml.svg)
