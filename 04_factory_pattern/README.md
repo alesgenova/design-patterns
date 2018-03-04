@@ -56,88 +56,88 @@ PizzaStore ---- PizzaFactory
 
 package "In Decorator Pattern Example" #EDEDED {
   Abstract Pizza{
-  getCost() : float
-  getDescription() : string
-}
+    getCost() : float
+    getDescription() : string
+  }
 
-Abstract PizzaDecorator{
-  getCost()
-  getDescription()
-  wrappedPizza : Pizza
-}
+  Abstract PizzaDecorator{
+    getCost()
+    getDescription()
+    wrappedPizza : Pizza
+  }
 
-Abstract ToppingDecorator{
-  getCost()
-  getDescription()
-}
+  Abstract ToppingDecorator{
+    getCost()
+    getDescription()
+  }
 
-Class Margherita{
-  getCost()
-  getDescription()
-}
+  Class Margherita{
+    getCost()
+    getDescription()
+  }
 
-Class Calzone{
-  getCost()
-  getDescription()
-}
+  Class Calzone{
+    getCost()
+    getDescription()
+  }
 
-Class FlatBread{
-  getCost()
-  getDescription()
-}
+  Class FlatBread{
+    getCost()
+    getDescription()
+  }
 
-Class BasicPizza{
-  getCost()
-  getDescription()
-}
+  Class BasicPizza{
+    getCost()
+    getDescription()
+  }
 
-Class Pepperoni{
-  getCost()
-  getDescription()
-}
+  Class Pepperoni{
+    getCost()
+    getDescription()
+  }
 
-Class Mozzarella{
-  getCost()
-  getDescription()
-}
+  Class Mozzarella{
+    getCost()
+    getDescription()
+  }
 
-Class Arugula{
-  getCost()
-  getDescription()
-}
+  Class Arugula{
+    getCost()
+    getDescription()
+  }
 
-Abstract StyleDecorator{
-  getCost()
-  getDescription()
-}
+  Abstract StyleDecorator{
+    getCost()
+    getDescription()
+  }
 
-Class NewYorkStyle{
-  getCost()
-  getDescription()
-}
+  Class NewYorkStyle{
+    getCost()
+    getDescription()
+  }
 
-Class ChicagoStyle{
-  getCost()
-  getDescription()
-}
+  Class ChicagoStyle{
+    getCost()
+    getDescription()
+  }
 
-Pizza <|-- Margherita
-Pizza <|-- Calzone
-Pizza <|-- FlatBread
-Pizza <|-- BasicPizza
+  Pizza <|-- Margherita
+  Pizza <|-- Calzone
+  Pizza <|-- FlatBread
+  Pizza <|-- BasicPizza
 
-Pizza <|-- PizzaDecorator
+  Pizza <|-- PizzaDecorator
 
-PizzaDecorator <|-- ToppingDecorator
+  PizzaDecorator <|-- ToppingDecorator
 
-PizzaDecorator <|-- StyleDecorator
+  PizzaDecorator <|-- StyleDecorator
 
-StyleDecorator <|-- NewYorkStyle
-StyleDecorator <|-- ChicagoStyle
+  StyleDecorator <|-- NewYorkStyle
+  StyleDecorator <|-- ChicagoStyle
 
-ToppingDecorator <|-- Mozzarella
-ToppingDecorator <|-- Pepperoni
-ToppingDecorator <|-- Arugula
+  ToppingDecorator <|-- Mozzarella
+  ToppingDecorator <|-- Pepperoni
+  ToppingDecorator <|-- Arugula
 
 }
 

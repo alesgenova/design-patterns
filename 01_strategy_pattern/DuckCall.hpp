@@ -7,7 +7,7 @@
 class DuckCall{
   public:
     DuckCall();
-    void performQuack() const;
+    void quack() const;
 
   private:
     const std::unique_ptr<QuackBehavior> quackBehavior;

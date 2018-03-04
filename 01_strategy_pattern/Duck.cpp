@@ -6,11 +6,11 @@
 
 Duck::Duck(){}
 
-void Duck::performFly() const {
+void Duck::fly() const {
   flyBehavior->fly();
 }
 
-void Duck::performQuack() const {
+void Duck::quack() const {
   quackBehavior->quack();
 }
 

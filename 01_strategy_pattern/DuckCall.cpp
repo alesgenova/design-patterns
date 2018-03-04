@@ -6,6 +6,6 @@ DuckCall::DuckCall()
   : quackBehavior(std::make_unique<Quack>())
 {}
 
-void DuckCall::performQuack() const {
+void DuckCall::quack() const {
   quackBehavior->quack();
 }

@@ -11,8 +11,8 @@ Abstract Duck{
   flyBehavior : FlyBehavior
   quackBehavior : QuackBehavior
   display()
-  performFly()
-  performQuack()
+  fly()
+  quack()
   setFlyBehavior()
   setQuackBehavior()
 }
@@ -57,7 +57,7 @@ Class Quack{
   quack()
 }
 
-Class Squeack{
+Class Squeak{
   quack()
 }
 
@@ -82,7 +82,7 @@ FlyBehavior <|.. RocketFly
 FlyBehavior <|.. FlyNot
 
 QuackBehavior <|.. Quack
-QuackBehavior <|.. Squeack
+QuackBehavior <|.. Squeak
 QuackBehavior <|.. QuackNot
 
 QuackBehavior -- Duck

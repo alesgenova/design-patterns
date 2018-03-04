@@ -9,8 +9,8 @@ class Duck{
   public:
     Duck();
     virtual void display() const = 0;
-    void performFly() const;
-    void performQuack() const;
+    virtual void fly() const;
+    virtual void quack() const;
     void setFlyBehavior(std::unique_ptr<FlyBehavior> fb);
     void setQuackBehavior(std::unique_ptr<QuackBehavior> qb);
 
