@@ -3,6 +3,10 @@ add_library (
     SHARED
     MenuItem.hpp
     MenuItem.cpp
+    Menu.hpp
+    Menu.cpp
+    Iterator.hpp
+    Iterator.cpp
 )
 
 add_executable (
