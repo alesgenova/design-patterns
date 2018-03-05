@@ -14,6 +14,7 @@ The book uses Java, but I opted to use C++ instead.
 6. Command pattern
 7. Adapter pattern and Facade pattern
 8. Template Method Pattern
+9. Iterator Pattern
 
 ... More coming as I go
 
