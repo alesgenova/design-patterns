@@ -22,7 +22,18 @@ class BreakfastIterator : public MenuIterator{
     virtual bool hasNext() const override;
   private:
     const std::vector< std::shared_ptr<MenuItem> > items;
-    const int n;
+    int curr;
+};
+
+
+class LunchIterator : public MenuIterator{
+  public:
+    LunchIterator(std::shared_ptr< MenuItem > t_items[], int T_MAX_ITEMS);
+    virtual std::shared_ptr<MenuItem> next() override;
+    virtual bool hasNext() const override;
+  private:
+    const std::shared_ptr< MenuItem > *items;
+    const int MAX_ITEMS;
     int curr;
 };
 

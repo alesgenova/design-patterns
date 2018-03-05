@@ -27,24 +27,24 @@ Class LunchMenu{
 Interface MenuIterator{
   + next()
   + hasNext()
-  + remove()
 }
 
 Class BreakfastIterator{
   + next()
   + hasNext()
-  + remove()
 }
 
 Class LunchIterator{
   + next()
   + hasNext()
-  + remove()
 }
 
 
 Class Waitress{
+  + breakfastMenu()
+  + lunchMenu()
   + wholeMenu()
+  + veggieMenu()
 }
 
 
@@ -57,6 +57,11 @@ Menu <|..  LunchMenu
 
 MenuIterator <|..  BreakfastIterator 
 MenuIterator <|..  LunchIterator
+
+
+note "The Iterator provides a unified interface to iterate through different data structures" as N0
+BreakfastMenu::items .. N0
+LunchMenu::items .. N0
 
 
 @enduml

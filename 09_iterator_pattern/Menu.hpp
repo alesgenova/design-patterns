@@ -22,16 +22,14 @@ class BreakfastMenu : public Menu{
 };
 
 
-// class LunchMenu{
-//   public:
-//     virtual std::shared_ptr<MenuIterator> createIterator() override;
-//   private:
-//     static const MAX_ITEMS = 10;
-//     std::shared_ptr< MenuItem > items[MAX_ITEMS];
-// };
-
-
-
+class LunchMenu : public Menu{
+  public:
+    LunchMenu();
+    virtual std::shared_ptr<MenuIterator> createIterator() override;
+  private:
+    const int MAX_ITEMS;
+    std::shared_ptr< MenuItem > *items;
+};
 
 
 #endif
