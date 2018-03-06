@@ -15,6 +15,7 @@ The book uses Java, but I opted to use C++ instead.
 7. Adapter pattern and Facade pattern
 8. Template Method Pattern
 9. Iterator Pattern
+10. State Pattern
 
 ... More coming as I go
 
@@ -46,3 +47,5 @@ The book uses Java, but I opted to use C++ instead.
 ## Iterator Pattern
 ![Iterator UML](09_iterator_pattern/uml.svg)
 
+## State Pattern
+![State UML](10_state_pattern/uml.svg)
