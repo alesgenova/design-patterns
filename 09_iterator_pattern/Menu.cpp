@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 #include "MenuItem.hpp"
 #include "Iterator.hpp"
@@ -82,5 +83,32 @@ LunchMenu::LunchMenu()
 
 std::shared_ptr<MenuIterator> LunchMenu::createIterator(){
   return std::make_shared<LunchIterator>(items, MAX_ITEMS);
+}
+
+
+CafeMenu::CafeMenu(){
+  items["Veggie Burger and Air Fries"] = std::make_shared<MenuItem>(
+    "Veggie Burger and Air Fries",
+    "Veggie burger on a whole wheat bun, lettuce, tomato, and fries",
+    10.99,
+    true
+  );
+  items["Soup of the day"] = std::make_shared<MenuItem>(
+    "Soup of the day",
+    "A cup of the soup of the day, with a side salad",
+    5.99,
+    true
+  );
+  items["Burrito"] = std::make_shared<MenuItem>(
+    "Burrito",
+    "A large burrito, with whole pinto beans, salsa, guacamole",
+    8.99,
+    false
+  );
+}
+
+
+std::shared_ptr<MenuIterator> CafeMenu::createIterator(){
+  return std::make_shared<CafeIterator>(items);
 }
 

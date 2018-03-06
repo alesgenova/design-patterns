@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 #include "MenuItem.hpp"
 #include "Iterator.hpp"
@@ -30,6 +31,15 @@ class LunchMenu : public Menu{
   private:
     const int MAX_ITEMS;
     std::shared_ptr< MenuItem > *items;
+};
+
+
+class CafeMenu : public Menu{
+  public:
+    CafeMenu();
+    virtual std::shared_ptr<MenuIterator> createIterator() override;
+  private:
+    std::unordered_map< std::string, std::shared_ptr< MenuItem > > items;
 };
 
 

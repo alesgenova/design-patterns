@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <unordered_map>
 
 #include "MenuItem.hpp"
 
@@ -35,6 +36,17 @@ class LunchIterator : public MenuIterator{
     const std::shared_ptr< MenuItem > *items;
     const int MAX_ITEMS;
     int curr;
+};
+
+
+class CafeIterator : public MenuIterator{
+  public:
+    CafeIterator(std::unordered_map< std::string, std::shared_ptr< MenuItem > > t_items);
+    virtual std::shared_ptr<MenuItem> next() override;
+    virtual bool hasNext() const override;
+  private:
+    std::unordered_map< std::string, std::shared_ptr< MenuItem > > items;
+    std::unordered_map< std::string, std::shared_ptr< MenuItem > >::iterator curr;
 };
 
 

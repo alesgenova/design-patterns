@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include <unordered_map>
 
 #include "Menu.hpp"
 #include "Waitress.hpp"
@@ -10,13 +11,8 @@ int main(){
   waitress->wholeMenu();
   waitress->breakfastMenu();
   waitress->lunchMenu();
+  waitress->dinnerMenu();
   waitress->veggieMenu();
-  // auto bMenu = std::make_shared<BreakfastMenu>();
-  // std::shared_ptr<MenuIterator> bIterator = bMenu->createIterator();
-
-  // auto lMenu = std::make_shared<LunchMenu>();
-  // std::shared_ptr<MenuIterator> lIterator = lMenu->createIterator();
-
 
   return 0;
 

@@ -9,6 +9,7 @@
 Waitress::Waitress()
   : bFastmenu(std::make_shared<BreakfastMenu>())
   , lMenu(std::make_shared<LunchMenu>())
+  , dMenu(std::make_shared<CafeMenu>())
 {}
 
 
@@ -17,6 +18,7 @@ void Waitress::wholeMenu() const{
   std::cout << "Here is the FULL menu:" << std::endl;
   iterateMenuHelper(bFastmenu);
   iterateMenuHelper(lMenu);
+  iterateMenuHelper(dMenu);
   std::cout << std::endl;
 }
 
@@ -32,10 +34,17 @@ void Waitress::lunchMenu() const{
   std::cout << std::endl;
 }
 
+void Waitress::dinnerMenu() const{
+  std::cout << "Here is the DINNER menu:" << std::endl;
+  iterateMenuHelper(dMenu);
+  std::cout << std::endl;
+}
+
 void Waitress::veggieMenu() const{
   std::cout << "Here is the VEGETARIAN menu:" << std::endl;
   iterateMenuHelper(bFastmenu, true);
   iterateMenuHelper(lMenu, true);
+  iterateMenuHelper(dMenu, true);
   std::cout << std::endl;
 }
 

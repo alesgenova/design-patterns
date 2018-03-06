@@ -4,7 +4,6 @@
 
 ![UML](uml.svg)
 
-
 ```plantuml
 @startuml
 
@@ -15,12 +14,17 @@ Interface Menu{
 
 Class BreakfastMenu{
   + createIterator()
-  - items : std::vector<MenuItem>
+  - items : std::vector<>
 }
 
 Class LunchMenu{
   + createIterator()
-  - items : MenuItem[]
+  - items : Array
+}
+
+Class DinnerMenu{
+  + createIterator()
+  - items : std::map<>
 }
 
 
@@ -39,11 +43,17 @@ Class LunchIterator{
   + hasNext()
 }
 
+Class DinnerIterator{
+  + next()
+  + hasNext()
+}
+
 
 Class Waitress{
+  + wholeMenu()
   + breakfastMenu()
   + lunchMenu()
-  + wholeMenu()
+  + dinnerMenu()
   + veggieMenu()
 }
 
@@ -54,15 +64,17 @@ Waitress -right- MenuIterator
 
 Menu <|..  BreakfastMenu 
 Menu <|..  LunchMenu
+Menu <|..  DinnerMenu
 
 MenuIterator <|..  BreakfastIterator 
 MenuIterator <|..  LunchIterator
+MenuIterator <|..  DinnerIterator
 
 
 note "The Iterator provides a unified interface to iterate through different data structures" as N0
 BreakfastMenu::items .. N0
 LunchMenu::items .. N0
-
+DinnerMenu::items .. N0
 
 @enduml
 ```

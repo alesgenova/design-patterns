@@ -1,5 +1,6 @@
 #include <string>
 #include <memory>
+#include <unordered_map>
 
 #include "MenuItem.hpp"
 #include "Iterator.hpp"
@@ -38,4 +39,16 @@ std::shared_ptr<MenuItem> LunchIterator::next(){
 
 
 
+CafeIterator::CafeIterator(std::unordered_map< std::string, std::shared_ptr< MenuItem > > t_items)
+  : items(t_items)
+  , curr(items.begin())
+{}
+
+bool CafeIterator::hasNext() const{
+  return (curr != items.end());
+}
+
+std::shared_ptr<MenuItem> CafeIterator::next(){
+  return (curr++)->second;
+}
 
