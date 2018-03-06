@@ -9,7 +9,8 @@
 
 
 class Menu{
-  virtual std::shared_ptr<MenuIterator> createIterator() = 0;
+  public:
+    virtual std::shared_ptr<MenuIterator> createIterator() = 0;
 };
 
 

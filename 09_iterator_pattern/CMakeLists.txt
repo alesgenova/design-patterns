@@ -7,6 +7,8 @@ add_library (
     Menu.cpp
     Iterator.hpp
     Iterator.cpp
+    Waitress.hpp
+    Waitress.cpp
 )
 
 add_executable (

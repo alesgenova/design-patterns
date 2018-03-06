@@ -75,7 +75,7 @@ LunchMenu::LunchMenu()
     "Hotdog",
     "A hot dog, with saurkraut, relish, onions, topped with cheese",
     3.99,
-    true
+    false
   );
 
 }
