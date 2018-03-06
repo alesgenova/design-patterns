@@ -19,6 +19,7 @@ Class BallgumMachine{
 }
 
 Interface MachineState{
+  - BallgumMachine *machine
   + insertQuarter()
   + ejectQarter()
   + turnCrank()
