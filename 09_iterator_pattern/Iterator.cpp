@@ -21,8 +21,8 @@ std::shared_ptr<MenuItem> BreakfastIterator::next(){
 
 
 LunchIterator::LunchIterator(std::shared_ptr< MenuItem > t_items[], int T_MAX_ITEMS)
-  : MAX_ITEMS(T_MAX_ITEMS)
-  , items(t_items)
+  : items(t_items)
+  , MAX_ITEMS(T_MAX_ITEMS)
   , curr(0)
 {}
 

@@ -6,7 +6,7 @@ A collections of problems and examples I worked out while studying the book [Hea
 
 The book uses Java, but I opted to use C++ instead.
 
-Not all of the examples follow the book to the letter. In several instances I diverged from the suggested solution if I thought I could find a better one, of if I noticed I could combine patterns/code across the examples.
+Not all of the examples follow the book to the letter. In several instances I diverged from the suggested solution if I thought I could find a better one, or if I noticed I could combine patterns/code across the examples.
 
 1. Strategy pattern
 2. Observer pattern

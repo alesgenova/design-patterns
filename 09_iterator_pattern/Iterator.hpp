@@ -23,7 +23,7 @@ class BreakfastIterator : public MenuIterator{
     virtual bool hasNext() const override;
   private:
     const std::vector< std::shared_ptr<MenuItem> > items;
-    int curr;
+    size_t curr;
 };
 
 
